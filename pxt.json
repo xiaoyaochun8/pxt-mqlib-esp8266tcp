@@ -13,7 +13,8 @@
         "main.ts",
         "netTs.ts",
         "netTime.ts",
-        "netWordByte.ts"
+        "netWordByte.ts",
+        "netPic.ts"
     ],
     "testFiles": [
         "test.ts"
