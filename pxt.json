@@ -11,8 +11,8 @@
         "README.md",
         "main.blocks",
         "main.ts",
-        "nettime.ts",
-        "netTs.ts"
+        "netTs.ts",
+        "netTime.ts"
     ],
     "testFiles": [
         "test.ts"
