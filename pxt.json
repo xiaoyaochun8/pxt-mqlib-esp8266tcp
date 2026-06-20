@@ -10,7 +10,8 @@
     "files": [
         "README.md",
         "main.blocks",
-        "main.ts"
+        "main.ts",
+        "nettime.ts"
     ],
     "testFiles": [
         "test.ts"

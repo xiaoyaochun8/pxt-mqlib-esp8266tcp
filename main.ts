@@ -9,6 +9,12 @@ namespace mqlib {
     let stateTcpData = false
     let rxData = ''
 
+    export interface AryRsp {
+        code: number,
+        msg: string,
+        data: string
+    }
+
     // export enum NetFunc {
     //     //% block="测试"
     //     test,
@@ -41,7 +47,7 @@ namespace mqlib {
         stateWifiConnected = true
     }
 
-    function requestServerData(ip: string, port: string, data: string) {
+    export function requestServerData(ip: string, port: string, data: string) {
         //reset state
         stateTcp = false
         stateTcpData = false
@@ -86,11 +92,6 @@ namespace mqlib {
         Esp8266SendAT("AT+CWQAP")
     }
 
-    interface AryRsp {
-        code: number,
-        msg: string,
-        data: string
-    }
     //% subcategory="esp8266"
     //% group='esp8266'
     //% block
