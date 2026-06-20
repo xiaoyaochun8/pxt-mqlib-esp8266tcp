@@ -5,7 +5,7 @@
 namespace mqlib {
 
     //% subcategory="esp8266"
-    //% group='getNetTs'
+    //% group='getNetWordByte'
     //% block
     export function showOledWord(ip: string, port: string): string {
         //循环拉取数据
