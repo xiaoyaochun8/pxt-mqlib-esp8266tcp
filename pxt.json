@@ -12,7 +12,8 @@
         "main.blocks",
         "main.ts",
         "netTs.ts",
-        "netTime.ts"
+        "netTime.ts",
+        "netWordByte.ts"
     ],
     "testFiles": [
         "test.ts"
