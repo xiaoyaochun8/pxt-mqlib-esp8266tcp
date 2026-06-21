@@ -7,9 +7,9 @@ namespace mqlib {
     //% subcategory="esp8266"
     //% group='getNetTs'
     //% block
-    export function getNetTs(ip: string, port: string): string {
+    export function getNetTs(): string {
         let data = 'getts,data1,0'
-        requestServerData(ip, port, data)
+        requestServerData(data)
         let aryRsp: AryRsp = getServerData()
         let sRsp = ''
         if (aryRsp.code == 0) {

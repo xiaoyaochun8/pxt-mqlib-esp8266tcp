@@ -27,7 +27,7 @@ namespace mqlib {
     //% subcategory="esp8266"
     //% group='esp8266'
     //% block
-    export function connectWifi(ssid: string, pw: string) {
+    export function connectWifi() {
         serial.redirect(
             SerialPin.P0,
             SerialPin.P1,
@@ -40,6 +40,8 @@ namespace mqlib {
         Esp8266SendAT("AT+CWMODE=1") // set to STA mode
         Esp8266SendAT("AT+RST", 1000) // reset
         // serial.readString()
+        let ssid = 'xwifi'
+        let pw = '56781234'
         Esp8266SendAT("AT+CWJAP=\"" + ssid + "\",\"" + pw + "\"", 0) // connect to Wifi router
 
         basic.pause(100) //!!!
@@ -47,7 +49,7 @@ namespace mqlib {
         stateWifiConnected = true
     }
 
-    export function requestServerData(ip: string, port: string, data: string) {
+    export function requestServerData(data: string) {
         //reset state
         stateTcp = false
         stateTcpData = false
@@ -56,6 +58,8 @@ namespace mqlib {
             return
         }
         //start request
+        let ip = '192.168.2.162'
+        let port = 9501
         Esp8266SendAT('AT+CIPSTART="TCP","' + ip + '",' + port, 0) // connect to website server
         waitTcpResponse(1)
         basic.pause(100)

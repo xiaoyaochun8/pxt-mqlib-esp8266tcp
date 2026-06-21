@@ -7,10 +7,10 @@ namespace mqlib {
     //% subcategory="esp8266"
     //% group='getNetWordByte'
     //% block
-    export function showOledPic(ip: string, port: string, picName: string): string {
+    export function showOledPic(picName: string): string {
         //循环拉取数据
         let data = 'getwordbyte,data1,0'
-        requestServerData(ip, port, data)
+        requestServerData(data)
         let aryRsp: AryRsp = getServerData()
         let sRsp = ''
         if (aryRsp.code == 0) {
