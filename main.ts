@@ -33,7 +33,8 @@ namespace mqlib {
             SerialPin.P1,
             BaudRate.BaudRate115200
         )
-        serial.setRxBufferSize(180)
+        //RxBufferSize:64/128/255
+        serial.setRxBufferSize(200)
         // Esp8266SendAT("AT+CWAUTOCONN=1")
         // Esp8266SendAT("AT+CWRECONNCFG=1,1")
         Esp8266SendAT("AT+RESTORE", 1000) // restore to factory settings
