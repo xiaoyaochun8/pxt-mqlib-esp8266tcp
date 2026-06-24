@@ -55,7 +55,7 @@ namespace mqlib {
         oledCmd(0x10 | (x >> 4));
         let d = 0;
         for (let i = 0; i < 16; i++){
-            d = parseInt(('0x'+c[i]))
+            d = parseInt('0x'+c[i]);
             oledData(d);
         }
 
@@ -64,7 +64,7 @@ namespace mqlib {
         oledCmd(0x10 | (x >> 4));
         let d = parseInt(('0x'+c[i]))
         for (let i = 16; i < 32; i++){
-            d = parseInt(('0x'+c[i]))
+            d = parseInt('0x'+c[i]);
             oledData(d);
         }
     }
