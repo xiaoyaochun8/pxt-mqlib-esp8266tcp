@@ -59,7 +59,8 @@ namespace mqlib {
             return
         }
         //start request
-        let ip = '192.168.2.162'
+        // let ip = '192.168.2.162'
+        let ip = '192.168.2.175'
         let port = 9501
         Esp8266SendAT('AT+CIPSTART="TCP","' + ip + '",' + port, 0) // connect to website server
         waitTcpResponse(1)
