@@ -3,20 +3,20 @@
  */
 //% groups=['esp8266']
 namespace mqlib {
-    function getWordByte(ch: string): string {
+    function getWordByte(ch: string): string[] {
         let data = 'getwordbyte,我,0'
         requestServerData(data)
         let aryRsp: AryRsp = getServerData()
-        let sRsp = ''
+        let sRsp:string[] = []
         if (aryRsp.code == 0) {
             sRsp = processData(aryRsp.data)
         }
         return sRsp
     }
-    function processData(inputStr: string): string {
+    function processData(inputStr: string): string[] {
         let tmp = inputStr.replaceAll("{", "").replaceAll("}", "")
-        tmp = tmp.split(',')
-        return tmp
+        let aryTmp = tmp.split(',')
+        return aryTmp
     }
     
     //% subcategory="esp8266"
@@ -62,7 +62,6 @@ namespace mqlib {
         oledCmd(0xB0 + page + 1);
         oledCmd(x & 0x0F);
         oledCmd(0x10 | (x >> 4));
-        let d = parseInt(('0x'+c[i]))
         for (let i = 16; i < 32; i++){
             d = parseInt('0x'+c[i]);
             oledData(d);
