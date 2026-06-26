@@ -9,7 +9,7 @@ namespace mqlib {
     //% block
     export function showOledPic(picName: string): string {
         //循环拉取数据
-        let data = 'getwordbyte,data1,0'
+        let data = 'data=getwordbyte,data1,0'
         requestServerData(data)
         let aryRsp: AryRsp = getServerData()
         let sRsp = ''

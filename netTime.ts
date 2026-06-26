@@ -8,7 +8,7 @@ namespace mqlib {
     //% group='getNetTime'
     //% block
     export function getNetTime(): string {
-        let data = 'gettime,data1,0'
+        let data = 'data=gettime,data1,0'
         requestServerData(data)
         let aryRsp: AryRsp = getServerData()
         let sRsp = ''

@@ -8,7 +8,7 @@ namespace mqlib {
     //% group='getNetTs'
     //% block
     export function getNetTs(): string {
-        let data = 'getts,data1,0'
+        let data = 'data=getts,data1,0'
         requestServerData(data)
         let aryRsp: AryRsp = getServerData()
         let sRsp = ''
