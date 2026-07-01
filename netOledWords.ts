@@ -35,7 +35,6 @@ namespace mqlib {
     export function oledShowCNByNet2(
         x: number,
         y: number,
-        str: string,
         // color: number
     ) {
         let cx = x;
